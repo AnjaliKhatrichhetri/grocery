@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+@keyframes slideInLeft{
+  from{
+    transform: translateX(-100px);
+  }
+  to{
+    transform:translatex(0px);
+  }
+}
+.logoanimate:hover{
+  transform:translateY(-10px);
+  transition-duration: 1s;
+  transition-delay: 0ms;
+  transition-property: all;
+  /* transform-style: preserve-3d; */
+  transition-timing-function: ease-in-out;
+ 
+}
+a:hover{
+  color:#7FAD39;
+  font-weight:500px ;
+}
+input:focus{
+  outline:none ;
+}
+
+.slideInLeft{
+  /* animation:slideInLeft 1s ease-in; */
+  animation-name:slideInLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-iteration-count:infinite;
+  animation-direction:normal;
+  animation-fill-mode: both; 
+
+
+}
+@keyframes motion{
+  from{
+ transform:translateY(35px);
+  }
+  to{
+transform: translateY(0);
+  }
+}
+.icon-popup{
+  animation:motion 1s ease-in ;
+}
+
+@keyframes rotateP{
+  from{
+ transform:rotate(0);
+  }
+  to{
+  transform:rotate(360deg);
+  }
+}
+.rotate{
+  animation-name:rotateP;
+  animation-timing-function: linear;
+  transform-origin:top right;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
